@@ -38,11 +38,9 @@ export default function Room() {
           dispatch(setVotesToSkip(data.votes_to_skip));
           dispatch(setGuestCanPause(data.guest_can_pause));
           dispatch(setIsHost(data.is_host));
-          console.log(data.is_host);
-          console.log(data.code);
-          console.log(isHost);
         } else {
           dispatch(setError(data.error));
+          navigate("/");
         }
       } catch (error) {
         dispatch(setError("Couldn't find room. Please create a room."));

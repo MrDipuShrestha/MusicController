@@ -1,11 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  roomCode: "",
+  roomCode: null,
   votesToSkip: 2,
   guestCanPause: true,
   isHost: true,
-  error: "",
+  error: null,
 };
 
 export const roomSlice = createSlice({

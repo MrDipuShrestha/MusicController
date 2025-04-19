@@ -135,8 +135,5 @@ CORS_ALLOWED_ORIGINS = [os.getenv("FRONTEND_API")]
 # CORS_ALLOW_ALL_ORIGINS = True // for all
 CORS_ALLOW_CREDENTIALS = True # for cradential
 
-SESSION_ENGINE = 'django.contrib.sessions.backends.db'  # Use database-backed sessions
-SESSION_COOKIE_NAME = 'sessionid'  # Default session cookie name
-
-SESSION_COOKIE_SAMESITE = "Lax"  # Or "None" if using cross-origin HTTPS
-SESSION_COOKIE_SECURE = False    # Set to True only for HTTPS
+# SESSION_COOKIE_SAMESITE = "Lax"  
+# SESSION_COOKIE_SECURE = False

@@ -28,7 +28,6 @@ export default function HomePage() {
     };
     fetchData();
   }, [dispatch]);
-  console.log(roomCode);
 
   return (
     <>
