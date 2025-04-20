@@ -5,7 +5,9 @@ const initialState = {
   votesToSkip: 2,
   guestCanPause: true,
   isHost: true,
-  error: null,
+  error: "",
+  showSetting: false,
+  spotifyAuthenticated: false,
 };
 
 export const roomSlice = createSlice({
@@ -27,6 +29,13 @@ export const roomSlice = createSlice({
     setError: (state, action) => {
       state.error = action.payload;
     },
+    setShowSetting: (state, action) => {
+      state.showSetting = action.payload;
+    },
+    setSpotifyAuthenticated: (state, action) => {
+      state.spotifyAuthenticated = action.payload;
+    },
+    resetRoom: () => initialState,
   },
 });
 
@@ -36,5 +45,8 @@ export const {
   setGuestCanPause,
   setIsHost,
   setError,
+  setShowSetting,
+  setSpotifyAuthenticated,
+  resetRoom,
 } = roomSlice.actions;
 export default roomSlice.reducer;
